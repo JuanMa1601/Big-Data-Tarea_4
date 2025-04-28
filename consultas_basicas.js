@@ -20,7 +20,7 @@ db.pacientes.insertOne({
     }
   ]
 });
-
+________________________________________
 //***Consulta de Selección:***//
 
 //Seleccionar todos los pacientes (find)
@@ -33,7 +33,7 @@ db.pacientes.find({ "nombre": "Laura Castillo" }).pretty()
 //Buscar pacientes con antecedentes médicos específicos
 db.pacientes.find({ "antecedentes_medicos": "Asma" }).pretty()
 //Busca cualquier paciente que tenga "Asma" dentro de su lista de antecedentes.
-
+________________________________________
 //***Consulta de Actualización.***//
 
 //Actualizar el número de teléfono de un paciente
@@ -49,7 +49,7 @@ db.pacientes.updateOne(
   { $push: { "antecedentes_medicos": "Diabetes tipo 2" } }
 )
 //Añade "Diabetes tipo 2" a la lista de antecedentes médicos de Laura.
-
+________________________________________
 //Consulta de Eliminación.
 //Eliminar un paciente por documento_id
 db.pacientes.deleteOne({ "documento_id": "987654321" })
